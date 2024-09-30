@@ -1,1 +1,22 @@
-#include
+//part2
+/*Verificare se un numero dato in input
+ è divisibile sia per 3 sia per 5
+*/
+
+#include <stdio.h>
+int main(){
+    int A = 0;
+    int divisibile = 0;
+
+    printf("inserisci il valore di %d:, A");
+    scanf("%d", &A);
+
+    divisibile = A%5;
+
+    if (divisibile==0){
+        printf("A%d è divisibile per 5:", A);
+    }
+    else{
+        printf("A%d non è divisibile per 5:", A);
+    }
+}
