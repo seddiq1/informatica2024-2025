@@ -22,7 +22,8 @@ int main(){
          printf("il primo valori %f corrisponde si quadrato del secondo &f", A,B);
 
 }
-else{
-    printf("il primo valore %f no corrisponde al quadrato del secondo %f", A,B);
+    else{
+        printf("il primo valore %f no corrisponde al quadrato del secondo %f", A,B);
 }
+
 }
