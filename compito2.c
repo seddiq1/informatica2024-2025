@@ -15,5 +15,6 @@ int main(){
     printf("inserisci il terzio valore il piu piccolo %d :", C);
     scanf("%d", &C);
     medio = (A+B+C)/3 ;
+
     printf("il primo valore è il piu grande %d il secondo valore è il piu piccolo%d il medio è %d:", A, C, medio);
 }
