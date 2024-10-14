@@ -47,7 +47,5 @@
         if (giorno>=1 && giorno<=31);
             printf("\nLa data è accettabile");
         }
-        else{
-            printf("\nLa data è non accettabile");
-        }
+       
     }
