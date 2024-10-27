@@ -9,9 +9,9 @@ int main(){
     printf("inserisci mese: ");
     scanf("%d", &mese);
     if (mese>=9 && mese<=12 && giorno>=1  && giorno<=31 )
-    {
+    
         if (mese>=9 && mese<=12 && giorno>=1  && giorno<=31 )
-    }
+    
     if(mese==1 || mese==2){
         printf("inverno ");
     }
