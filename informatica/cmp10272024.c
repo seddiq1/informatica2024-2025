@@ -19,14 +19,15 @@ int main () {
                     printf("il numero è divisibile a 3");
                 else
                     printf("il numero non è divisibile a 3");
-                        if (9<n1<100)
+                        if (n1>9 && n1<100)
                         {
                             q=n1%10;
                             r=n1/10;
                             d=r%10;
                             m=q+d;
+                        
                         }
-                        else if (m==0)
+                        if (m%3==0)
                             printf("il numero è divisibile a 3");
                         else
                             printf("il numero non è divisibile a 3");
