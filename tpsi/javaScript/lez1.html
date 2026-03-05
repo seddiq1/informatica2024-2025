@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function mostyraOra() {
+                var d = new Date();
+                var ora = d.toLocalTimeString();
+                //alert(ora);
+                document.body.innerHTML += "<p>l'ora attuale è: </p>";
+                document.body.innerHTML += ora;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="buttom" onclick="mostyraOra();" value="che ora è?">
+        </form>
+    </body>
+</html>

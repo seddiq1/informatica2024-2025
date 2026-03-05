@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript</title>
+    <style>
+        #output {
+            width: 400px;
+            height: 399px;
+            border: 2px solid black;
+            margin-top: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+        input[type="button"] {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+        form {
+            max-width: 500px;
+        }
+    </style>
+    <script>
+        function scrivi() {
+            var messaggio = document.getElementById("messaggio").value;
+            document.getElementById("output").innerHTML = messaggio;
+        }
+        
+        function cambiaColore() {
+            var msg = document.getElementById("messaggio").value;
+            var colore = document.getElementById("colore").value;
+            document.getElementById("output").innerHTML = msg;
+            document.getElementById("output").style.color = colore;
+        }
+        
+        function aumentaWidth() {
+            var output = document.getElementById("output");
+            var currentWidth = parseInt(output.style.width) || 400;
+            output.style.width = (currentWidth + 50) + "px";
+        }
+        
+        function diminuisciWidth() {
+            var output = document.getElementById("output");
+            var currentWidth = parseInt(output.style.width) || 400;
+            if (currentWidth > 100) {
+                output.style.width = (currentWidth - 50) + "px";
+            }
+        }
+        
+        function copiaTesto() {
+            var testo = document.getElementById("output").innerHTML;
+            navigator.clipboard.writeText(testo).then(function() {
+                alert("Testo copiato negli appunti!");
+            });
+        }
+    </script>
+</head>
+<body>
+    <form
+        name="moduli"
+    >
+        <label>Lascia un commento:</label>
+        <input
+            type="text"
+            id="messaggio"
+            name="messaggio"
+            maxlength="200"
+        >
+        
+        <label>Inserisci un colore:</label>
+        <input
+            type="text"
+            id="colore"
+            name="colore"
+            maxlength="20"
+            placeholder="es: red, #FF0000"
+        >
+        
+        <br><br>
+        
+        <input
+            type="button"
+            value="Scrivi il testo"
+            onclick="scrivi();"
+        >
+        <input
+            type="button"
+            value="Cambia colore"
+            onclick="cambiaColore();"
+        >
+        <input
+            type="button"
+            value="Copia testo"
+            onclick="copiaTesto();"
+        >
+        <br><br>
+        <input
+            type="button"
+            value="Aumenta larghezza"
+            onclick="aumentaWidth();"
+        >
+        <input
+            type="button"
+            value="Diminuisci larghezza"
+            onclick="diminuisciWidth();"
+        >
+        
+        <div
+            id="output"
+        >Scrivi un messaggio e clicca i pulsanti!</div>
+    </form>
+</body>
+</html>

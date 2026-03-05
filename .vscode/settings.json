@@ -1,5 +1,7 @@
 {
     "files.associations": {
         "01EX093020214.C": "cpp"
-    }
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }

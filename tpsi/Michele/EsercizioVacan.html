@@ -1,0 +1,89 @@
+<!-- 
+Inserire due numeri all'interno di due input type 
+ed eseguirne la somma. 
+Prevedere un ulteriore pulsante tale che a secondo che la 
+somma risulta essere pari o dispari verrà colorato lo sfondo 
+della div, in cui visualizzeremo il risultato,
+in due colori diversi; in un alert invece verrà comunicato 
+se il valore è pari o dispari.
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Prova</title>
+
+<style>
+      
+    #output{
+    width: 100px;
+    height: 50px;;
+    border: 1px solid #000;
+    margin-top: 10px;
+    transition: width 1s;
+  }
+
+</style>
+
+<script>
+    var larghezza=100;
+
+    function somma(){
+    const n1 = Number(document.getElementById("num1").value);
+    const n2 = Number(document.getElementById("num2").value);
+
+    const risultato = n1 + n2;
+    }
+  function Check() {
+  var somma = Number(document.getElementById("risultato").value);
+
+  if (somma % 2 == 0) {
+    document.body.style.backgroundColor = "green";
+    alert("Il numero è pari!");
+  } else {
+    document.body.style.backgroundColor = "blue";
+    alert("Il numero è dispari!");
+  }
+}
+
+	function allarga() {
+		larghezza+=50;
+		document.getElementById("output").style.width=larghezza+"px";
+	}
+	
+	function stringi() {
+		if (larghezza>50) {
+			larghezza-=50;
+			document.getElementById("output").style.width=larghezza+"px";
+		}
+	}
+	function resetta() {
+		document.spazio.risultato.value="";
+		document.spazio.colore.value="";
+        document.body.style.backgroundColor = "";	
+    }
+	
+</script>
+
+</head>
+
+<body>
+  <label>Inserisci i numeri:</label><br>
+
+  <input type="text" id="num1">
+  <input type="text" id="num2">
+
+  <button onclick="somma()">Somma</button>
+  <button onclick="Check()">Pari o dispari</button>
+  <input type="button" value="Allarga" onclick="allarga();">
+  <input type="button" value="Stringi" onclick="stringi();">
+  <input type="button" value="Clean" onclick="resetta();">
+
+
+  <div id="output">Risultato: </div>
+</body>
+</html>
